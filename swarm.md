@@ -53,3 +53,9 @@ services:
       update_config:
         order: start-first
 ```
+
+```
+docker swarm update --autolock=true
+
+docker swarm unlock
+```
