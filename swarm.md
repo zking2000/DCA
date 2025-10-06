@@ -125,3 +125,14 @@ docker swarm leave --force
 docker swarm join-token manager
 docker swarm join-token worker
 ```
+
+```
+如果你只执行了“删除镜像 + 删除仓库”
+
+DTR 会：
+	•	删除数据库中的引用；
+	•	但实际磁盘上的 /var/lib/docker/registry/v2/blobs/sha256/... 层文件依旧存在；
+	•	你会发现磁盘空间仍被占用；
+	•	只有执行 GC 后，空间才会被释放。
+
+```
