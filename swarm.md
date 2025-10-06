@@ -142,3 +142,8 @@ DTR 会：
 cordon 是“禁止新 Pod 调度”，
 drain 是“驱逐已有 Pod 并禁止新 Pod 调度”。
 ```
+
+```
+PAM is not a supported user authentication method for Universal Control Plane. According to the official
+documentation, the supported methods are LDAP, Active Directory, SAML 2.0, and local users
+```
